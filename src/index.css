@@ -1,9 +1,8 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
@@ -48,12 +47,12 @@
   }
 
   body {
-    @apply bg-offwhite text-gray-800 font-['Montserrat'];
-    background-image: linear-gradient(to right, #FFDEE2, #F8F8F8);
+    @apply bg-offwhite text-gray-800 font-['Public_Sans'];
+    background-color: #F8F8F8;
   }
 
   h1, h2, h3, h4, h5 {
-    @apply font-['Playfair_Display'];
+    @apply font-['Public_Sans'] font-light;
   }
 
   .backdrop-blur {
@@ -79,11 +78,7 @@
 
 @layer utilities {
   .service-box {
-    @apply p-6 rounded-lg bg-white/80 shadow-sm border-l-4 backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-5px] opacity-0 animate-fade-in;
-  }
-  
-  .gradient-background {
-    @apply before:content-[''] before:absolute before:inset-0 before:bg-pink-gradient before:opacity-30 before:backdrop-blur-lg relative;
+    @apply p-6 rounded-lg bg-white shadow-sm border border-2 backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:translate-y-[-5px] opacity-0 animate-fade-in;
   }
   
   .text-balance {

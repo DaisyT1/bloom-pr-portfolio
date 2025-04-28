@@ -23,12 +23,12 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
       <div className="max-w-7xl mx-auto">
         <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12`}>
           <div className="lg:w-1/2 opacity-0 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
-            <p className="text-lg mb-6 text-gray-700">{description}</p>
-            <p className="text-gray-600 mb-8">{additionalText}</p>
+            <h2 className="text-3xl md:text-4xl font-light mb-6">{title}</h2>
+            <p className="text-lg mb-6 text-gray-700 font-light">{description}</p>
+            <p className="text-gray-600 mb-8 font-light">{additionalText}</p>
             
-            <h4 className="font-semibold text-lg mb-4">Services include:</h4>
-            <ul className="space-y-2">
+            <h4 className="font-light text-lg mb-4">Services include:</h4>
+            <ul className="space-y-2 font-light">
               {services.map((service, index) => (
                 <li key={index} className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-pink mt-2 mr-2"></span>
@@ -38,9 +38,9 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
             </ul>
           </div>
           
-          <div className="lg:w-1/2 bg-gradient-to-br from-pink-light/20 to-white rounded-lg shadow-sm flex items-center justify-center p-8 min-h-[300px] opacity-0 animate-fade-in animate-delay-200">
+          <div className="lg:w-1/2 bg-white rounded-lg shadow-sm flex items-center justify-center p-8 min-h-[300px] opacity-0 animate-fade-in animate-delay-200">
             <div className="w-20 h-20 rounded-full bg-pink-light flex items-center justify-center">
-              <span className="text-3xl text-pink-dark font-bold">{title.charAt(0)}</span>
+              <span className="text-3xl text-pink-dark font-light">{title.charAt(0)}</span>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
 
 const DetailedServices: React.FC = () => {
   return (
-    <div className="bg-gradient-radial from-pink-light/20 via-offwhite to-white">
+    <div className="bg-offwhite">
       <ServiceDetails 
         id="strategy"
         title="Brand Strategy"
