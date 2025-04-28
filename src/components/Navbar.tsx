@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
       isScrolled ? "bg-white/80 shadow-sm backdrop-blur" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="#" className="text-xl font-semibold text-gray-800 font-['Playfair_Display']">
-          BLOOM PR
+        <a href="#" className="text-xl font-light text-gray-800 font-['Playfair_Display']">
+          BEAUFOY
         </a>
 
         <div className="hidden md:flex space-x-8">
