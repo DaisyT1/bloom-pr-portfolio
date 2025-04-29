@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <a href="#" className="text-xl font-light text-gray-800 font-['Playfair_Display']">
-          BEAUFOY
+          Beaufoy
         </a>
 
         <div className="hidden md:flex space-x-8">

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-light mb-4 font-['Playfair_Display']">BEAUFOY</h3>
+            <h3 className="text-xl font-light mb-4 font-['Playfair_Display']">Beaufoy</h3>
             <p className="text-gray-600">
               A full-service communications agency for luxury consumer brands.
             </p>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-600 text-sm">© 2025 BEAUFOY. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">© 2025 Beaufoy. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-600 hover:text-pink-dark transition-colors">Privacy Policy</a>
             <a href="#" className="text-gray-600 hover:text-pink-dark transition-colors">Terms of Service</a>

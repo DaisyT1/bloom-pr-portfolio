@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface ServiceDetailsProps {
   id: string;
@@ -18,8 +18,27 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   services, 
   isReversed = false 
 }) => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = sectionRef.current;
+      if (!section) return;
+      
+      const { top } = section.getBoundingClientRect();
+      const speed = id === 'strategy' ? 0.3 : id === 'reputation' ? 0.2 : 0.1;
+      const offset = window.scrollY * speed;
+      const translateY = Math.min(offset, 50); // Limit the parallax effect
+
+      section.style.transform = `translateY(${translateY}px)`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [id]);
+
   return (
-    <section id={id} className="py-16 md:py-24 px-6 md:px-12 relative">
+    <section ref={sectionRef} id={id} className="py-10 md:py-16 px-6 md:px-12 relative">
       <div className="max-w-7xl mx-auto">
         <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12`}>
           <div className="lg:w-1/2 opacity-0 animate-fade-in">
@@ -31,7 +50,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
             <ul className="space-y-2 font-light">
               {services.map((service, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-pink mt-2 mr-2"></span>
+                  <span className="inline-block text-gray-500 mr-2">—</span>
                   <span className="text-gray-700">{service}</span>
                 </li>
               ))}
@@ -39,9 +58,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
           </div>
           
           <div className="lg:w-1/2 flex items-center justify-center p-8 min-h-[300px] opacity-0 animate-fade-in animate-delay-200">
-            <div className="w-20 h-20 rounded-full bg-pink-light flex items-center justify-center">
-              <span className="text-3xl text-pink-dark font-light">{title.charAt(0)}</span>
-            </div>
+            {/* Removed the pink circles with letters */}
           </div>
         </div>
       </div>
@@ -51,7 +68,10 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
 
 const DetailedServices: React.FC = () => {
   return (
-    <div className="bg-offwhite">
+    <div className="bg-gradient-to-b from-pink-light/50 to-offwhite">
+      <div className="max-w-7xl mx-auto pt-12 pb-4">
+        <h2 className="text-3xl md:text-4xl font-light text-center mb-8 font-['Playfair_Display']">Our Approach</h2>
+      </div>
       <ServiceDetails 
         id="strategy"
         title="Brand Strategy"

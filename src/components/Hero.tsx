@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
         </div>
         
         <div className="md:w-2/5 hidden md:block opacity-0 animate-fade-in animate-delay-300">
-          <img alt="Cherry Blossom Tree" src="/lovable-uploads/e6e03fdb-93cb-4a38-8e18-ac769d37e1be.jpg" className="w-1/2 h-auto rounded-lg shadow-lg object-scale-down" />
+          <img alt="Office Building" src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a" className="w-1/2 h-auto rounded-lg shadow-lg object-cover" />
         </div>
       </div>
     </section>;
