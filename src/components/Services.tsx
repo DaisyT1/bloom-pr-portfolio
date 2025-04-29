@@ -26,29 +26,34 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor
       onMouseLeave={() => setIsHovered(false)}
       className="relative"
     >
-      <Card 
-        variant="neubrutalism" 
-        className={cn(
-          "h-full bg-offwhite border-[1px] border-zinc-300",
-          "shadow-sm hover:shadow-md transition-shadow duration-300",
-          borderColor
-        )}
-        style={{ animationDelay: delay }}
-      >
+      <div className="relative h-full">
         {isHovered && (
-          <GlowEffect
-            colors={colors}
-            mode="breathe"
-            blur="medium"
-            scale={1.05}
-            duration={3}
-          />
+          <div className="absolute inset-0 pointer-events-none">
+            <GlowEffect
+              colors={colors}
+              mode="breathe"
+              blur="medium"
+              scale={1.05}
+              duration={3}
+              className="!inset-[-2px] !h-[calc(100%+4px)] !w-[calc(100%+4px)]"
+            />
+          </div>
         )}
-        <CardContent>
-          <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
-          <p className="text-charcoal text-sm leading-relaxed font-light font-roboto">{description}</p>
-        </CardContent>
-      </Card>
+        <Card 
+          variant="neubrutalism" 
+          className={cn(
+            "h-full bg-offwhite border-[1px] border-zinc-300",
+            "shadow-sm hover:shadow-md transition-shadow duration-300 relative z-10",
+            borderColor
+          )}
+          style={{ animationDelay: delay }}
+        >
+          <CardContent>
+            <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
+            <p className="text-charcoal text-sm leading-relaxed font-light font-roboto">{description}</p>
+          </CardContent>
+        </Card>
+      </div>
     </motion.div>
   );
 };
