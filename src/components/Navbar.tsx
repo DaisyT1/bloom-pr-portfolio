@@ -30,29 +30,6 @@ const Navbar: React.FC = () => {
         <a href="#" className="text-xl font-light text-gray-800 font-['Playfair_Display']">
           Beaufoy
         </a>
-
-        <div className="hidden md:flex space-x-8">
-          <a href="#services" className="text-sm font-medium text-gray-700 hover:text-pink-dark transition-colors">
-            Services
-          </a>
-          <a href="#strategy" className="text-sm font-medium text-gray-700 hover:text-pink-dark transition-colors">
-            Strategy
-          </a>
-          <a href="#reputation" className="text-sm font-medium text-gray-700 hover:text-pink-dark transition-colors">
-            Reputation
-          </a>
-          <a href="#content" className="text-sm font-medium text-gray-700 hover:text-pink-dark transition-colors">
-            Content
-          </a>
-        </div>
-
-        <button className="hidden md:block px-6 py-2 bg-pink-light text-pink-dark rounded hover:bg-pink hover:text-white transition-colors font-medium">
-          Contact Us
-        </button>
-        
-        <button className="md:hidden text-gray-800">
-          Menu
-        </button>
       </div>
     </nav>
   );

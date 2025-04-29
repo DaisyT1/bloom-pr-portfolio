@@ -26,15 +26,15 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
           <img src={imageSrc} alt={imageAlt} className="rounded-lg shadow-md w-full h-auto" />
         </div>
         <div className="md:w-2/3">
-          <h3 className="text-2xl font-light mb-4 font-['Playfair_Display']">{title}</h3>
+          <h3 className="text-xl md:text-2xl font-light mb-4 uppercase tracking-wider font-['Playfair_Display']">{title}</h3>
           
-          <h4 className="font-medium text-gray-700 mb-2">Challenge</h4>
+          <h4 className="font-medium text-gray-700 mb-2 uppercase tracking-wider text-sm">Challenge</h4>
           <p className="text-gray-600 mb-4 font-light">{challengeText}</p>
           
-          <h4 className="font-medium text-gray-700 mb-2">Approach</h4>
+          <h4 className="font-medium text-gray-700 mb-2 uppercase tracking-wider text-sm">Approach</h4>
           <p className="text-gray-600 mb-4 font-light">{approachText}</p>
           
-          <h4 className="font-medium text-gray-700 mb-2">Results</h4>
+          <h4 className="font-medium text-gray-700 mb-2 uppercase tracking-wider text-sm">Results</h4>
           <p className="text-gray-600 font-light">{resultsText}</p>
         </div>
       </div>
@@ -46,7 +46,7 @@ const CaseStudies: React.FC = () => {
   return (
     <section id="case-studies" className="py-16 px-6 md:px-12 bg-offwhite">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-light text-center mb-12 font-['Playfair_Display']">Examples of Our Work</h2>
+        <h2 className="text-2xl md:text-3xl font-light text-center mb-12 uppercase tracking-wider font-['Playfair_Display']">Examples of Our Work</h2>
         
         <CaseStudy
           title="Luca Faloni"
