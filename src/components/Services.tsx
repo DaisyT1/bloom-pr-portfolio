@@ -26,14 +26,13 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor
       <div className="absolute inset-0 pointer-events-none">
         <GlowEffect
           colors={colors}
-          mode="colorShift"
-          blur="soft"
-          duration={3}
+          mode="static"
+          blur="softest"
           scale={1.2}
         />
       </div>
       <div className="relative z-10">
-        <h3 className="text-xl font-light mb-3 font-['ui-sans-serif'] text-charcoal">{title}</h3>
+        <h3 className="text-lg font-light mb-3 font-['ui-sans-serif'] text-charcoal">{title}</h3>
         <p className="text-charcoal text-sm leading-relaxed font-light font-['ui-sans-serif']">{description}</p>
       </div>
     </motion.div>
@@ -80,10 +79,10 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 px-6 md:px-12 relative bg-offwhite">
+    <section id="services" className="py-16 md:py-24 px-6 md:px-12 relative bg-transparent">
       <div className="max-w-7xl mx-auto">
         <motion.h2 
-          className="text-3xl md:text-4xl font-light text-center mb-12 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal"
+          className="text-2xl md:text-3xl font-light text-center mb-12 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

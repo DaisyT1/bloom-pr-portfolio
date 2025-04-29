@@ -26,15 +26,15 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
           <img src={imageSrc} alt={imageAlt} className="rounded-lg shadow-md w-full h-auto" />
         </div>
         <div className="md:w-2/3">
-          <h3 className="text-xl md:text-2xl font-light mb-4 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">{title}</h3>
+          <h3 className="text-lg md:text-xl font-light mb-4 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">{title}</h3>
           
-          <h4 className="font-medium text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Challenge</h4>
+          <h4 className="font-light text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Challenge</h4>
           <p className="text-charcoal mb-4 font-light font-['ui-sans-serif']">{challengeText}</p>
           
-          <h4 className="font-medium text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Approach</h4>
+          <h4 className="font-light text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Approach</h4>
           <p className="text-charcoal mb-4 font-light font-['ui-sans-serif']">{approachText}</p>
           
-          <h4 className="font-medium text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Results</h4>
+          <h4 className="font-light text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Results</h4>
           <p className="text-charcoal font-light font-['ui-sans-serif']">{resultsText}</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 
 const CaseStudies: React.FC = () => {
   return (
-    <section id="case-studies" className="py-16 px-6 md:px-12 bg-offwhite">
+    <section id="case-studies" className="py-16 px-6 md:px-12 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-light text-center mb-12 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">Examples of Our Work</h2>
         

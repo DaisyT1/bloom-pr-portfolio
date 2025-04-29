@@ -155,7 +155,7 @@ const DetailedServices: React.FC = () => {
   ];
 
   return (
-    <div className="bg-offwhite overflow-hidden">
+    <div className="bg-transparent overflow-hidden">
       <Timeline data={timelineData} />
     </div>
   );
