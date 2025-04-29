@@ -28,7 +28,11 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor
     >
       <Card 
         variant="neubrutalism" 
-        className={cn("h-full bg-offwhite border-[1px] border-zinc-300", borderColor)}
+        className={cn(
+          "h-full bg-offwhite border-[1px] border-zinc-300",
+          "shadow-sm hover:shadow-md transition-shadow duration-300",
+          borderColor
+        )}
         style={{ animationDelay: delay }}
       >
         {isHovered && (
