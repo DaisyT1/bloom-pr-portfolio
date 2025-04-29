@@ -3,7 +3,7 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-16 px-6 md:px-12 bg-transparent text-white">
+    <section id="contact" className="py-16 px-6 md:px-12 bg-[#1e3a5f] text-white">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-light mb-8 uppercase tracking-wider font-['ui-sans-serif']">Get in touch</h2>
         

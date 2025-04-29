@@ -3,9 +3,9 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 px-6 md:px-12 bg-transparent">
+    <section id="about" className="py-16 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-light text-center mb-8 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">About Beaufoy</h2>
+        <h2 className="text-3xl md:text-4xl font-light text-center mb-8 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">About Beaufoy</h2>
         
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg mb-6 text-charcoal font-light font-['ui-sans-serif']">
