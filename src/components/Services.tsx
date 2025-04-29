@@ -17,13 +17,17 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor
     <motion.div 
       className={cn("relative overflow-hidden p-6 rounded-lg bg-offwhite", borderColor)}
       style={{ animationDelay: delay }}
-      whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
+      whileHover={{ 
+        scale: 1.03, 
+        boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+        transition: { duration: 0.3 } 
+      }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: parseFloat(delay) }}
       viewport={{ once: true, margin: "-100px" }}
     >
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none opacity-40">
         <GlowEffect
           colors={colors}
           mode="colorShift"
@@ -33,7 +37,7 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor
         />
       </div>
       <div className="relative z-10">
-        <h3 className="text-xl font-light mb-3 font-['ui-sans-serif'] text-charcoal">{title}</h3>
+        <h3 className="text-xl font-light mb-3 font-['ui-sans-serif'] uppercase text-charcoal">{title}</h3>
         <p className="text-charcoal text-sm leading-relaxed font-light font-['ui-sans-serif']">{description}</p>
       </div>
     </motion.div>
