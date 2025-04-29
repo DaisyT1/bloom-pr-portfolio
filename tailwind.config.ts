@@ -109,6 +109,10 @@ export default {
 						backgroundPosition: "100% 0%, 50% 50%",
 					},
 				},
+				rainbow: {
+					from: { backgroundPosition: "0 0" },
+					to: { backgroundPosition: "100% 0" },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -116,6 +120,7 @@ export default {
 				'fade-in': 'fade-in 0.7s ease-out forwards',
 				'slide-in': 'slide-in 0.7s ease-out forwards',
 				aurora: "aurora 25s linear infinite",
+				rainbow: "rainbow 4s linear infinite",
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

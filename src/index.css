@@ -56,6 +56,13 @@
     --blue-500: #3b82f6;
     --indigo-300: #a5b4fc;
     --violet-200: #ddd6fe;
+    
+    /* Rainbow variables */
+    --color-1: 0 72% 51%;
+    --color-2: 217 91% 60%;
+    --color-3: 271 91% 65%;
+    --color-4: 198 93% 60%;
+    --color-5: 43 96% 56%;
   }
 
   body {
