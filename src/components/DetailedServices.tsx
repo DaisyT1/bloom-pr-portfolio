@@ -78,7 +78,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
     <section 
       ref={sectionRef} 
       id={id} 
-      className={`py-10 md:py-16 px-6 md:px-12 relative transition-all duration-500 ease-in-out ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-96'}`}
+      className="py-10 md:py-16 px-6 md:px-12 relative"
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
@@ -117,7 +117,7 @@ const DetailedServices: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-pink-light/50 to-offwhite overflow-hidden">
+    <div className="bg-offwhite overflow-hidden">
       <div className="max-w-7xl mx-auto pt-12 pb-4">
         <h2 className="text-2xl md:text-3xl font-light text-center mb-8 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">Our Approach</h2>
       </div>

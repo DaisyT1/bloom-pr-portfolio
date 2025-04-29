@@ -15,17 +15,19 @@ interface ServiceBoxProps {
 const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor, delay, colors }) => {
   return (
     <motion.div 
-      className={cn("service-box relative overflow-hidden", borderColor)}
+      className={cn("relative overflow-hidden p-6 rounded-lg bg-offwhite border border-2", borderColor)}
       style={{ animationDelay: delay }}
       whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
     >
-      <GlowEffect
-        colors={colors}
-        mode="colorShift"
-        blur="soft"
-        duration={3}
-        scale={1.2}
-      />
+      <div className="absolute inset-0 pointer-events-none">
+        <GlowEffect
+          colors={colors}
+          mode="colorShift"
+          blur="soft"
+          duration={3}
+          scale={1.2}
+        />
+      </div>
       <div className="relative z-10">
         <h3 className="text-xl font-light mb-3 font-['ui-sans-serif'] text-charcoal">{title}</h3>
         <p className="text-charcoal text-sm leading-relaxed font-light font-['ui-sans-serif']">{description}</p>
@@ -74,7 +76,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 px-6 md:px-12 relative">
+    <section id="services" className="py-16 md:py-24 px-6 md:px-12 relative bg-offwhite">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-light text-center mb-12 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">Our Services</h2>
         
