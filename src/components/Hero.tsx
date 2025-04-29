@@ -1,18 +1,34 @@
 
 import React from 'react';
+import { AuroraBackground } from './ui/aurora-background';
+import { motion } from 'framer-motion';
+
 const Hero: React.FC = () => {
-  return <section className="relative min-h-screen flex items-center bg-offwhite">
+  return (
+    <AuroraBackground className="min-h-screen bg-offwhite">
       <div className="container mx-auto px-6 md:px-12 relative z-20 flex flex-col md:flex-row items-center justify-between">
-        <div className="md:w-3/5 mb-8 md:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 mb-6 opacity-0 animate-fade-in font-['Playfair_Display']">
+        <motion.div 
+          className="md:w-4/5 mb-8 md:mb-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal mb-6 font-['ui-sans-serif']">
             We are a full-service communications agency for luxury consumer brands
           </h1>
-        </div>
+        </motion.div>
         
-        <div className="md:w-2/5 hidden md:block opacity-0 animate-fade-in animate-delay-300">
+        <motion.div 
+          className="md:w-3/5 hidden md:block"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <img alt="Office Building" src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a" className="w-full h-auto rounded-lg shadow-lg object-cover" />
-        </div>
+        </motion.div>
       </div>
-    </section>;
+    </AuroraBackground>
+  );
 };
+
 export default Hero;

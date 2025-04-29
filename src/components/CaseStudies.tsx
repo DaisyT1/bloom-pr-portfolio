@@ -26,16 +26,16 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
           <img src={imageSrc} alt={imageAlt} className="rounded-lg shadow-md w-full h-auto" />
         </div>
         <div className="md:w-2/3">
-          <h3 className="text-xl md:text-2xl font-light mb-4 uppercase tracking-wider font-['Playfair_Display']">{title}</h3>
+          <h3 className="text-xl md:text-2xl font-light mb-4 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">{title}</h3>
           
-          <h4 className="font-medium text-gray-700 mb-2 uppercase tracking-wider text-sm">Challenge</h4>
-          <p className="text-gray-600 mb-4 font-light">{challengeText}</p>
+          <h4 className="font-medium text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Challenge</h4>
+          <p className="text-charcoal mb-4 font-light font-['ui-sans-serif']">{challengeText}</p>
           
-          <h4 className="font-medium text-gray-700 mb-2 uppercase tracking-wider text-sm">Approach</h4>
-          <p className="text-gray-600 mb-4 font-light">{approachText}</p>
+          <h4 className="font-medium text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Approach</h4>
+          <p className="text-charcoal mb-4 font-light font-['ui-sans-serif']">{approachText}</p>
           
-          <h4 className="font-medium text-gray-700 mb-2 uppercase tracking-wider text-sm">Results</h4>
-          <p className="text-gray-600 font-light">{resultsText}</p>
+          <h4 className="font-medium text-charcoal mb-2 uppercase tracking-wider text-sm font-['ui-sans-serif']">Results</h4>
+          <p className="text-charcoal font-light font-['ui-sans-serif']">{resultsText}</p>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@ const CaseStudies: React.FC = () => {
   return (
     <section id="case-studies" className="py-16 px-6 md:px-12 bg-offwhite">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-light text-center mb-12 uppercase tracking-wider font-['Playfair_Display']">Examples of Our Work</h2>
+        <h2 className="text-2xl md:text-3xl font-light text-center mb-12 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">Examples of Our Work</h2>
         
         <CaseStudy
           title="Luca Faloni"
@@ -62,7 +62,7 @@ const CaseStudies: React.FC = () => {
         <CaseStudy
           title="Atlantic Money"
           imageSrc="https://images.unsplash.com/photo-1578932750294-f5075e85f44a"
-          imageAlt="iPhone showing financial app"
+          imageAlt="Luca Faloni shirt"
           challengeText="We were hired by Atlantic Money, the Index Ventures-backed foreign exchange firm, to help introduce their product in the UK. A month following their launch, they were delisted from their largest competitor's price comparison tool, in doing so, severely impeding Atlantic Money's ability to source new customers."
           approachText="We acted as a trusted advisor to Atlantic Money's senior team, organising their complaint to the Competition and Markets Authority, and managing the media response. Our approach was to stress the fact that the competitor had, in removing Atlantic Money, breached one of its founding principles of seeking to increase transparency and help consumers."
           resultsText="We were able to secure positive coverage in The Guardian, CNBC, The Daily Mail, and others, reaching over 200 million people. Our team also worked with Atlantic Money to ensure a swift product update which we had placed in TechCrunch to refocus the narrative to the team's focus on delivering for consumers. Working with the client, we helped turn an existential threat to their future to a month of record new customer onboarding and record user volume."

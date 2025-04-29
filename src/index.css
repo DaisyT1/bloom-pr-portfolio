@@ -46,15 +46,25 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Aurora variables */
+    --white: #fff;
+    --black: #000;
+    --transparent: transparent;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --indigo-300: #a5b4fc;
+    --violet-200: #ddd6fe;
   }
 
   body {
-    @apply bg-offwhite text-gray-800 font-['Public_Sans'];
+    @apply bg-offwhite text-charcoal font-['ui-sans-serif'];
     background-color: #F8F8F8;
   }
 
   h1, h2, h3, h4, h5 {
-    @apply font-['Public_Sans'] font-light;
+    @apply font-['ui-sans-serif'] font-light;
   }
 
   .backdrop-blur {

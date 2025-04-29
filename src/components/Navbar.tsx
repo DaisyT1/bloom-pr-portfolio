@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       isScrolled ? "bg-white/80 shadow-sm backdrop-blur" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="#" className="text-xl font-light text-gray-800 font-['Playfair_Display']">
+        <a href="#" className="text-xl font-light text-charcoal font-['Playfair_Display']">
           Beaufoy
         </a>
       </div>

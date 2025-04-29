@@ -1,5 +1,26 @@
 
 import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+
+interface ServicePointProps {
+  text: string;
+  index: number;
+  isVisible: boolean;
+}
+
+const ServicePoint: React.FC<ServicePointProps> = ({ text, index, isVisible }) => {
+  return (
+    <motion.li 
+      className="flex items-start"
+      initial={{ opacity: 0, x: -10 }}
+      animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+    >
+      <span className="inline-block text-charcoal mr-2">—</span>
+      <span className="text-charcoal">{text}</span>
+    </motion.li>
+  );
+};
 
 interface ServiceDetailsProps {
   id: string;
@@ -21,6 +42,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
   onEnter
 }) => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [visiblePoints, setVisiblePoints] = useState<boolean[]>(services.map(() => false));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,12 +55,19 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
       if (isVisible && !isActive) {
         onEnter();
       }
-      
-      const speed = id === 'strategy' ? 0.3 : id === 'reputation' ? 0.2 : 0.1;
-      const offset = window.scrollY * speed;
-      const translateY = Math.min(offset, 50); // Limit the parallax effect
 
-      section.style.transform = `translateY(${translateY}px)`;
+      // Check if service points should be visible
+      if (isVisible && isActive) {
+        const pointsContainer = section.querySelector('.service-points');
+        if (pointsContainer) {
+          const pointsRect = pointsContainer.getBoundingClientRect();
+          const pointsVisible = pointsRect.top < window.innerHeight * 0.8;
+          
+          if (pointsVisible) {
+            setVisiblePoints(prev => prev.map((_, i) => true));
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -54,17 +83,19 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2">
-            <h2 className="text-2xl md:text-3xl font-light mb-6 text-gray-800 uppercase tracking-wider">{title}</h2>
-            <p className="text-lg mb-6 text-gray-700 font-light">{description}</p>
-            <p className="text-gray-600 mb-8 font-light">{additionalText}</p>
+            <h2 className="text-2xl md:text-3xl font-light mb-6 text-charcoal uppercase tracking-wider font-['ui-sans-serif']">{title}</h2>
+            <p className="text-lg mb-6 text-charcoal font-light font-['ui-sans-serif']">{description}</p>
+            <p className="text-charcoal mb-8 font-light font-['ui-sans-serif']">{additionalText}</p>
             
-            <h4 className="font-light text-lg mb-4 text-gray-800 uppercase tracking-wider">Services include:</h4>
-            <ul className="space-y-2 font-light">
+            <h4 className="font-light text-lg mb-4 text-charcoal uppercase tracking-wider font-['ui-sans-serif']">Services include:</h4>
+            <ul className="space-y-2 font-light service-points font-['ui-sans-serif']">
               {services.map((service, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="inline-block text-gray-500 mr-2">—</span>
-                  <span className="text-gray-700">{service}</span>
-                </li>
+                <ServicePoint 
+                  key={index}
+                  text={service}
+                  index={index}
+                  isVisible={visiblePoints[index]}
+                />
               ))}
             </ul>
           </div>
@@ -88,7 +119,7 @@ const DetailedServices: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-pink-light/50 to-offwhite overflow-hidden">
       <div className="max-w-7xl mx-auto pt-12 pb-4">
-        <h2 className="text-2xl md:text-3xl font-light text-center mb-8 uppercase tracking-wider font-['Playfair_Display']">Our Approach</h2>
+        <h2 className="text-2xl md:text-3xl font-light text-center mb-8 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">Our Approach</h2>
       </div>
       
       <div className="relative">

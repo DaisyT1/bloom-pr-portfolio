@@ -68,7 +68,8 @@ export default {
 					DEFAULT: '#FF8FAE',
 					dark: '#FF5C8A'
 				},
-				offwhite: '#F8F8F8'
+				offwhite: '#F8F8F8',
+				charcoal: '#403E43',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -99,13 +100,22 @@ export default {
 				'slide-in': {
 					'0%': { opacity: '0', transform: 'translateX(-20px)' },
 					'100%': { opacity: '1', transform: 'translateX(0)' }
-				}
+				},
+				aurora: {
+					from: {
+						backgroundPosition: "0% 0%, 50% 50%",
+					},
+					to: {
+						backgroundPosition: "100% 0%, 50% 50%",
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.7s ease-out forwards',
-				'slide-in': 'slide-in 0.7s ease-out forwards'
+				'slide-in': 'slide-in 0.7s ease-out forwards',
+				aurora: "aurora 25s linear infinite",
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
