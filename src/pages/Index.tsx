@@ -12,7 +12,7 @@ import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen font-['ui-sans-serif']">
+    <div className="min-h-screen font-roboto">
       <Navbar />
       <Hero />
       <div className="relative z-10">

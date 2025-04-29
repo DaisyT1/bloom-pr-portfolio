@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from './ui/advanced-card';
 
@@ -22,12 +21,12 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor
     >
       <Card 
         variant="neubrutalism" 
-        className={cn("h-full", borderColor)}
+        className={cn("h-full bg-offwhite", borderColor)}
         style={{ animationDelay: delay }}
       >
         <CardContent>
-          <h3 className="text-xl font-light mb-3 uppercase text-charcoal">{title}</h3>
-          <p className="text-charcoal text-sm leading-relaxed font-light">{description}</p>
+          <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
+          <p className="text-charcoal text-sm leading-relaxed font-light font-roboto">{description}</p>
         </CardContent>
       </Card>
     </motion.div>
@@ -77,7 +76,7 @@ const Services: React.FC = () => {
     <section id="services" className="py-16 md:py-24 px-6 md:px-12 relative bg-offwhite">
       <div className="max-w-7xl mx-auto">
         <motion.h2 
-          className="text-3xl md:text-4xl font-light text-center mb-12 uppercase tracking-wider text-charcoal"
+          className="text-3xl md:text-4xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -104,3 +103,6 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+
+// Import the cn utility which is missing in the original code
+import { cn } from '@/lib/utils';
