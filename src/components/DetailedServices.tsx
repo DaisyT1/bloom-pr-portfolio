@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Timeline } from './ui/timeline';
 import { motion } from 'framer-motion';
@@ -52,7 +53,6 @@ const DetailedServices: React.FC = () => {
           </div>
         </motion.div>
       ),
-      colors: ['#FFDEE2', '#FFB5C5', '#FF8FAE', '#FFD1DC']
     },
     {
       title: "Reputation Management",
@@ -102,7 +102,6 @@ const DetailedServices: React.FC = () => {
           </div>
         </motion.div>
       ),
-      colors: ['#D1E5F7', '#B0D5F5', '#8FB9F0', '#D1E9FF']
     },
     {
       title: "Content Marketing",
@@ -152,7 +151,6 @@ const DetailedServices: React.FC = () => {
           </div>
         </motion.div>
       ),
-      colors: ['#D1F7E0', '#B0F5C5', '#8FF0AA', '#D1FFE9']
     },
   ];
 

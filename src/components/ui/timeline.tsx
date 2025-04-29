@@ -11,7 +11,6 @@ import React, { useEffect, useRef, useState } from "react";
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
-  colors?: string[];
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -53,12 +52,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-offwhite flex items-center justify-center">
-                <div 
-                  className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2"
-                  style={{
-                    background: item.colors ? `linear-gradient(to right, ${item.colors.join(', ')})` : undefined
-                  }}
-                />
+                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-light text-charcoal font-roboto uppercase tracking-wider">
                 {item.title}
@@ -83,9 +77,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             style={{
               height: heightTransform,
               opacity: opacityTransform,
-              background: "linear-gradient(to bottom, #FFDEE2, #FFB5C5, #FF8FAE, #FFD1DC)",
             }}
-            className="absolute inset-x-0 top-0 w-[2px] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-blue-500 via-purple-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
