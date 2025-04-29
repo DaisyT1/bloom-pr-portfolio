@@ -61,7 +61,7 @@ const CaseStudies: React.FC = () => {
         
         <CaseStudy
           title="Atlantic Money"
-          imageSrc="https://images.unsplash.com/photo-1621330396173-e41b1cafd17f"
+          imageSrc="https://images.unsplash.com/photo-1578932750294-f5075e85f44a"
           imageAlt="iPhone showing financial app"
           challengeText="We were hired by Atlantic Money, the Index Ventures-backed foreign exchange firm, to help introduce their product in the UK. A month following their launch, they were delisted from their largest competitor's price comparison tool, in doing so, severely impeding Atlantic Money's ability to source new customers."
           approachText="We acted as a trusted advisor to Atlantic Money's senior team, organising their complaint to the Competition and Markets Authority, and managing the media response. Our approach was to stress the fact that the competitor had, in removing Atlantic Money, breached one of its founding principles of seeking to increase transparency and help consumers."
