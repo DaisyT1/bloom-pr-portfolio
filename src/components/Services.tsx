@@ -1,7 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from './ui/advanced-card';
+import { GlowEffect } from './ui/glow-effect';
+import { cn } from '@/lib/utils';
 
 interface ServiceBoxProps {
   title: string;
@@ -11,19 +13,33 @@ interface ServiceBoxProps {
   colors: string[];
 }
 
-const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor, delay }) => {
+const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, borderColor, delay, colors }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: parseFloat(delay) }}
       viewport={{ once: true, margin: "-100px" }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative"
     >
       <Card 
         variant="neubrutalism" 
-        className={cn("h-full bg-offwhite", borderColor)}
+        className={cn("h-full bg-offwhite border-[1px] border-zinc-300", borderColor)}
         style={{ animationDelay: delay }}
       >
+        {isHovered && (
+          <GlowEffect
+            colors={colors}
+            mode="breathe"
+            blur="medium"
+            scale={1.05}
+            duration={3}
+          />
+        )}
         <CardContent>
           <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
           <p className="text-charcoal text-sm leading-relaxed font-light font-roboto">{description}</p>
@@ -103,6 +119,3 @@ const Services: React.FC = () => {
 };
 
 export default Services;
-
-// Import the cn utility which is missing in the original code
-import { cn } from '@/lib/utils';

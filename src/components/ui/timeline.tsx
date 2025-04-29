@@ -35,11 +35,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-offwhite font-['ui-sans-serif'] px-4 md:px-10"
+      className="w-full bg-offwhite px-4 md:px-10 font-roboto"
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-10 md:py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-2xl md:text-3xl mb-4 text-charcoal uppercase tracking-wider font-light font-['ui-sans-serif'] text-center">
+        <h2 className="text-2xl md:text-3xl mb-4 text-charcoal uppercase tracking-wider font-light font-roboto text-center">
           Our Approach
         </h2>
       </div>
@@ -54,13 +54,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-offwhite flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-light text-charcoal font-['ui-sans-serif'] uppercase tracking-wider">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-light text-charcoal font-roboto uppercase tracking-wider">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-light text-charcoal font-['ui-sans-serif'] uppercase tracking-wider">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-light text-charcoal font-roboto uppercase tracking-wider">
                 {item.title}
               </h3>
               {item.content}{" "}
