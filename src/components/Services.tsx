@@ -80,7 +80,7 @@ const Services: React.FC = () => {
   }];
   return <section id="services" className="py-16 px-6 md:px-12 relative bg-offwhite md:py-[51px]">
       <div className="max-w-7xl mx-auto">
-        <motion.h2 className="text-3xl md:text-4xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto" initial={{
+        <motion.h2 initial={{
         opacity: 0,
         y: 20
       }} whileInView={{
@@ -91,7 +91,7 @@ const Services: React.FC = () => {
       }} viewport={{
         once: true,
         margin: "-100px"
-      }}>
+      }} className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">
           Our Services
         </motion.h2>
         

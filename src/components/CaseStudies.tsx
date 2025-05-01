@@ -37,9 +37,9 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
     </div>;
 };
 const CaseStudies: React.FC = () => {
-  return <section id="case-studies" className="px-6 md:px-12 bg-offwhite py-[16px]">
+  return <section id="case-studies" className="px-6 md:px-12 py-[16px] bg-zinc-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-light text-center mb-12 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal md:text-3xl">EXAMPLES OF OUR WORK</h2>
+        <h2 className="text-2xl font-light text-center mb-12 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal md:text-4xl">EXAMPLES OF OUR WORK</h2>
         
         <CaseStudy title="Luca Faloni" imageSrc="https://images.unsplash.com/photo-1578932750294-f5075e85f44a" imageAlt="Luca Faloni shirt" challengeText="We were hired by Luca Faloni, the luxury Italian menswear designer, to develop a media campaign to raise awareness for the brand's linen and cashmere clothing. We were tasked with developing a PR strategy to showcase Luca's focus on craftsmanship and materials to demonstrate the quality of their product." approachText="We worked with the brand to devise messaging to highlight the process with which the team identifies and works with traditional Italian artisans. To complement this, we highlighted the brand's royal and celebrity following as a means to further establish the heritage of the brand and, by extension, the desirability of their products among a discerning audience. We arranged briefings and introductions with key lifestyle editors, ensuring coverage published to coincide with the newly-opened flagship store on the King's Road in Chelsea." resultsText="We partnered with John Arlidge at The Sunday Times for Luca's first major interview, with subsequent coverage seen in key trade publications such as Monocle and Tatler. The coverage reached more than 10 million people over the course of the following week." />
         

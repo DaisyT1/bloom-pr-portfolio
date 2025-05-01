@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const About: React.FC = () => {
-  return (
-    <section id="about" className="py-16 px-6 md:px-12 bg-white">
+  return <section id="about" className="py-16 px-6 md:px-12 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-light text-center mb-8 uppercase tracking-wider font-['ui-sans-serif'] text-charcoal">About Beaufoy</h2>
         
@@ -21,8 +18,6 @@ const About: React.FC = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
