@@ -18,8 +18,8 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react({
-      // Enable Fast Refresh for React components
-      fastRefresh: true,
+      // The react-swc plugin doesn't support the fastRefresh option directly
+      // It's enabled by default in development mode
     }),
     mode === 'development' &&
     componentTagger(),
