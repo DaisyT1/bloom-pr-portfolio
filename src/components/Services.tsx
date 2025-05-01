@@ -94,7 +94,7 @@ const Services: React.FC = () => {
       }} className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">
           Our Services
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {services.map((service, index) => <ServiceBox key={index} title={service.title} description={service.description} borderColor={service.borderColor} delay={service.delay} colors={service.colors} />)}
         </div>
