@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/moving-border';
 import { ArrowRight } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
     <section id="contact" className="py-16 px-6 md:px-12 text-white bg-slate-400">
       <div className="max-w-3xl mx-auto text-center">
@@ -13,10 +15,15 @@ const Contact: React.FC = () => {
           We partner with leaders and disruptors to ensure their voices are heard. If you'd like to discuss how we can help bolster and protect your brand's reputation.
         </p>
         
-        <a href="mailto:will@beaufoycomms.com?subject=Just%20saying%20hi">
+        <a 
+          href="mailto:will@beaufoycomms.com?subject=Just%20saying%20hi"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <Button 
             className="font-light tracking-wider text-charcoal hover:text-pink-dark transition-colors mx-auto"
             containerClassName="w-48 h-14"
+            duration={isHovered ? 2000 : 9000}
           >
             GET IN TOUCH <ArrowRight className="ml-2" />
           </Button>
