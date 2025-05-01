@@ -23,6 +23,7 @@ const Contact: React.FC = () => {
           <Button 
             className="font-light tracking-wider text-charcoal hover:text-pink-dark transition-colors mx-auto"
             containerClassName="w-48 h-14"
+            borderClassName="bg-[radial-gradient(#F2FCE2_40%,transparent_60%)]"
             duration={isHovered ? 2000 : 9000}
           >
             GET IN TOUCH <ArrowRight className="ml-2" />
