@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
             borderClassName="bg-[radial-gradient(#FF5C8A_100%,transparent_100%)]"
             duration={isHovered ? 2000 : 4000}
           >
-            GET IN TOUCH <ArrowRight className="ml-2" />
+            CONTACT US <ArrowRight className="ml-2" />
           </Button>
         </a>
       </div>

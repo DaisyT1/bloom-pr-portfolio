@@ -25,7 +25,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
           <img src={imageSrc} alt={imageAlt} className="rounded-lg shadow-md w-full h-auto" />
         </div>
         <div className="md:w-2/3">
-          <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
+          <h3 className="text-xl font-light mb-5 uppercase text-charcoal font-roboto">{title}</h3>
 
           <h4 className="font-medium text-charcoal mb-2 uppercase tracking-wider text-sm font-['roboto']">Challenge</h4>
           <p className="text-charcoal mb-4 font-light font-['roboto']">{challengeText}</p>
@@ -45,7 +45,7 @@ const CaseStudies: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">EXAMPLES OF OUR WORK</h2>
 
-        <CaseStudy title="Luca Faloni" imageSrc="public/lovable-uploads/lucaws.webp" imageAlt="Luca Faloni shirt" challengeText="We were hired by Luca Faloni, the luxury Italian menswear designer, to develop a media campaign to raise awareness for the brand's linen and cashmere clothing. We were tasked with developing a PR strategy to showcase Luca's focus on craftsmanship and materials to demonstrate the quality of their product." approachText="We worked with the brand to devise messaging to highlight the process with which the team identifies and works with traditional Italian artisans. To complement this, we highlighted the brand's royal and celebrity following as a means to further establish the heritage of the brand and, by extension, the desirability of their products among a discerning audience. We arranged briefings and introductions with key lifestyle editors, ensuring coverage published to coincide with the newly-opened flagship store on the King's Road in Chelsea." resultsText="We partnered with John Arlidge at The Sunday Times for Luca's first major interview, with subsequent coverage seen in key trade publications such as Monocle and Tatler. The coverage reached more than 10 million people over the course of the following week." />
+        <CaseStudy title="Luca Faloni" imageSrc="public/lovable-uploads/lucaws.webp" imageAlt="Luca Faloni shirt" challengeText="We were retained by Luca Faloni, the luxury Italian menswear designer, to develop a media campaign to raise awareness for the brand's linen and cashmere clothing. We were tasked with developing a PR strategy to showcase Luca's focus on craftsmanship and materials to demonstrate the quality of their product." approachText="We worked with the brand to devise messaging to highlight the process with which the team identifies and works with traditional Italian artisans. To complement this, we highlighted the brand's royal and celebrity following as a means to further establish the heritage of the brand and, by extension, the desirability of their products among a discerning audience. We arranged briefings and introductions with key lifestyle editors, ensuring coverage published to coincide with the newly-opened flagship store on the King's Road in Chelsea." resultsText="We partnered with John Arlidge at The Sunday Times for Luca's first major interview, with subsequent coverage seen in key trade publications such as Monocle and Tatler. The coverage reached more than 10 million people over the course of the following week." />
 
         <Separator className="my-12" />
 
