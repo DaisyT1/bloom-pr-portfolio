@@ -6,12 +6,8 @@ const About: React.FC = () => {
 
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg mb-6 text-charcoal font-light font-['roboto']">
-            Beaufoy is a full-service communications agency specialising in positioning luxury consumer brands.
-          </p>
-
-          <p className="text-lg mb-6 text-charcoal font-light font-['roboto']">
             Uniquely complemented by the insights of data scientists and anthropologists, we combine storytelling with data, delivering outcomes that are quantifiable and commercially-aligned to our clients' brands.
-            With a presence in fifteen locations, our team has deep relationships with key tier one editors, influencers, and decision-makers across Europe and North America.
+            Our team has deep relationships with key tier one editors, influencers, and decision-makers across Europe and North America.
           </p>
 
         </div>

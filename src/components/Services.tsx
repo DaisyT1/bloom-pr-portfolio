@@ -55,7 +55,7 @@ const Services: React.FC = () => {
     colors: ['#FFDEE2', '#FFB5C5', '#FF8FAE', '#FFD1DC']
   }, {
     title: "Content Creation",
-    description: "From speeches to blog posts, we work with clients to help articulate complex ideas succinctly.",
+    description: "We help our clients to explain complex issues succinctly to establish trust and build loyalty.",
     borderColor: "border-blue-100",
     delay: "0.1s",
     colors: ['#D1E5F7', '#B0D5F5', '#8FB9F0', '#D1E9FF']
