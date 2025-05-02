@@ -8,31 +8,19 @@ const content = [
     title: "Network",
     description:
       "Our team has deep relationships with key tier one editors established over decades of work. Whether it's an editor at a broadcaster or a broadsheet, our calls get answered and our clients' messages are heard.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white font-roboto font-light text-xl p-4">
-        Network
-      </div>
-    ),
+    content: null,
   },
   {
     title: "Focus",
     description:
       "We take the time to understand our clients' business, the nuances of their industry and their customers, to help develop and deliver a data-driven media strategy that is aligned to their priorities.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--pink-500),var(--indigo-500))] flex items-center justify-center text-white font-roboto font-light text-xl p-4">
-        Focus
-      </div>
-    ),
+    content: null,
   },
   {
     title: "Quantifiable",
     description:
       "We focus on creating measurable results. Whether it's increased media coverage, enhanced brand awareness, or stronger audience engagement, we deliver outcomes that are quantifiable.",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white font-roboto font-light text-xl p-4">
-        Quantifiable
-      </div>
-    ),
+    content: null,
   }
 ];
 
