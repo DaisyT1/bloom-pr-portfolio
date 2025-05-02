@@ -41,6 +41,15 @@ const Index: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-100px" }}
         >
+          <WhatWeOffer />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <CaseStudies />
         </motion.div>
 
@@ -51,15 +60,6 @@ const Index: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <About />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <WhatWeOffer />
         </motion.div>
 
         <motion.div
