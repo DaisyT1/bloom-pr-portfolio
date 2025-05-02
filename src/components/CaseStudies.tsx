@@ -22,11 +22,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   return <div className="mb-16">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/3">
-          <img 
-            src={imageSrc} 
-            alt={imageAlt} 
-            className="rounded-lg shadow-md w-full h-auto max-w-full max-h-[300px] object-contain" 
-          />
+          <img src={imageSrc} alt={imageAlt} className="rounded-lg shadow-md w-full h-auto" />
         </div>
         <div className="md:w-2/3">
           <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
