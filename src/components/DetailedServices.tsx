@@ -24,7 +24,7 @@ const DetailedServices: React.FC = () => {
           </p>
           <div className="mb-6">
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
@@ -33,7 +33,7 @@ const DetailedServices: React.FC = () => {
               — Brand positioning and messaging
             </motion.div>
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
@@ -42,7 +42,7 @@ const DetailedServices: React.FC = () => {
               — Market research and consumer insights
             </motion.div>
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}
@@ -73,7 +73,7 @@ const DetailedServices: React.FC = () => {
           </p>
           <div className="mb-6">
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
@@ -82,7 +82,7 @@ const DetailedServices: React.FC = () => {
               — Media relations
             </motion.div>
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
@@ -91,7 +91,7 @@ const DetailedServices: React.FC = () => {
               — Crisis management
             </motion.div>
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}
@@ -122,7 +122,7 @@ const DetailedServices: React.FC = () => {
           </p>
           <div className="mb-6">
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
@@ -131,7 +131,7 @@ const DetailedServices: React.FC = () => {
               — Speechwriting
             </motion.div>
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
@@ -140,7 +140,7 @@ const DetailedServices: React.FC = () => {
               — Website copywriting
             </motion.div>
             <motion.div
-              className="flex gap-2 items-center text-charcoal font-roboto text-sm"
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3, delay: 0.3 }}

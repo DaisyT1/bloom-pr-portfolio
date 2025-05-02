@@ -72,7 +72,7 @@ const Services: React.FC = () => {
     delay: "0.3s",
     colors: ['#F7F1D1', '#F5E5B0', '#F0D68F', '#FFEED1']
   }, {
-    title: "Partnerships",
+    title: "Brand Partnerships",
     description: "We advise and connect our clients with like-minded brands and influencers.",
     borderColor: "border-purple-100",
     delay: "0.4s",
