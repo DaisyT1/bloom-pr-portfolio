@@ -1,5 +1,8 @@
+
 import React from 'react';
 import { Separator } from './ui/separator';
+import { AspectRatio } from './ui/aspect-ratio';
+
 interface CaseStudyProps {
   title: string;
   imageSrc: string;
@@ -8,6 +11,7 @@ interface CaseStudyProps {
   approachText: string;
   resultsText: string;
 }
+
 const CaseStudy: React.FC<CaseStudyProps> = ({
   title,
   imageSrc,
@@ -18,8 +22,16 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 }) => {
   return <div className="mb-16">
       <div className="flex flex-col md:flex-row gap-8 items-center">
-        <div className="md:w-1/3">
-          <img src={imageSrc} alt={imageAlt} className="rounded-lg shadow-md w-full h-auto" />
+        <div className="md:w-1/3 w-full">
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <AspectRatio ratio={4/3} className="w-full">
+              <img 
+                src={imageSrc} 
+                alt={imageAlt} 
+                className="w-full h-full object-cover" 
+              />
+            </AspectRatio>
+          </div>
         </div>
         <div className="md:w-2/3">
           <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
@@ -36,6 +48,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
       </div>
     </div>;
 };
+
 const CaseStudies: React.FC = () => {
   return <section id="case-studies" className="px-6 md:px-12 py-[16px] bg-zinc-50">
       <div className="max-w-7xl mx-auto">
@@ -45,8 +58,9 @@ const CaseStudies: React.FC = () => {
 
         <Separator className="my-12" />
 
-        <CaseStudy title="Atlantic Money" imageSrc="public/lovable-uploads/atlanticws.png" imageAlt="Luca Faloni shirt" challengeText="We were hired by Atlantic Money, the Index Ventures-backed foreign exchange firm, to help introduce their product in the UK. A month following their launch, they were delisted from their largest competitor's price comparison tool, in doing so, severely impeding Atlantic Money's ability to source new customers." approachText="We acted as a trusted advisor to Atlantic Money's senior team, organising their complaint to the Competition and Markets Authority, and managing the media response. Our approach was to stress the fact that the competitor had, in removing Atlantic Money, breached one of its founding principles of seeking to increase transparency and help consumers." resultsText="We were able to secure positive coverage in The Guardian, CNBC, The Daily Mail, and others, reaching over 200 million people. Our team also worked with Atlantic Money to ensure a swift product update which we had placed in TechCrunch to refocus the narrative to the team's focus on delivering for consumers. Working with the client, we helped turn an existential threat to their future to a month of record new customer onboarding and record user volume." />
+        <CaseStudy title="Atlantic Money" imageSrc="public/lovable-uploads/atlanticws.png" imageAlt="Atlantic Money logo" challengeText="We were hired by Atlantic Money, the Index Ventures-backed foreign exchange firm, to help introduce their product in the UK. A month following their launch, they were delisted from their largest competitor's price comparison tool, in doing so, severely impeding Atlantic Money's ability to source new customers." approachText="We acted as a trusted advisor to Atlantic Money's senior team, organising their complaint to the Competition and Markets Authority, and managing the media response. Our approach was to stress the fact that the competitor had, in removing Atlantic Money, breached one of its founding principles of seeking to increase transparency and help consumers." resultsText="We were able to secure positive coverage in The Guardian, CNBC, The Daily Mail, and others, reaching over 200 million people. Our team also worked with Atlantic Money to ensure a swift product update which we had placed in TechCrunch to refocus the narrative to the team's focus on delivering for consumers. Working with the client, we helped turn an existential threat to their future to a month of record new customer onboarding and record user volume." />
       </div>
     </section>;
 };
+
 export default CaseStudies;
