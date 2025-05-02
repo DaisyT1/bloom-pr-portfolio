@@ -45,16 +45,30 @@ export const StickyScroll = ({
     "rgb(23 23 23)", // neutral-900
   ];
 
+  const linearGradients = [
+    "linear-gradient(to bottom right, #e9b7ce, #d3f3f1)", // cyan-500 to emerald-500
+    "linear-gradient(to bottom right, rgb(236 72 153), rgb(99 102 241))", // pink-500 to indigo-500
+    "linear-gradient(to bottom right, rgb(249 115 22), rgb(234 179 8))", // orange-500 to yellow-500
+  ];
+
+  const [backgroundGradient, setBackgroundGradient] = useState(
+    linearGradients[0]
+  );
+
+  useEffect(() => {
+    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+  }, [activeCard]);
+
   return (
     <motion.div
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative rounded-md p-10 roboto"
+      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 roboto"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4 flex-row-reverse">
-        <div className="max-w-2xl ml-10">
+      <div className="div relative flex items-start px-4">
+        <div className="max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20 font-light roboto">
               <motion.h2
@@ -83,15 +97,15 @@ export const StickyScroll = ({
           ))}
           <div className="h-40" />
         </div>
-        
-        <div
-          className={cn(
-            "h-60 w-80 rounded-md sticky top-10 overflow-hidden roboto",
-            contentClassName
-          )}
-        >
-          {content[activeCard].content ?? null}
-        </div>
+      </div>
+      <div
+        style={{ background: backgroundGradient }}
+        className={cn(
+          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden roboto",
+          contentClassName
+        )}
+      >
+        {content[activeCard].content ?? null}
       </div>
     </motion.div>
   );
