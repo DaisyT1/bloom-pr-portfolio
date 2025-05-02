@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
             containerClassName="w-48 h-14"
             borderClassName="bg-[radial-gradient(#FF5C8A_100%,transparent_100%)]"
             duration={isHovered ? 2000 : 4000}
-          >
+          > 
             CONTACT US <ArrowRight className="ml-2" />
           </Button>
         </a>
