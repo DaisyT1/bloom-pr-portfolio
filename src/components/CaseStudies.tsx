@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Separator } from './ui/separator';
-import { AspectRatio } from './ui/aspect-ratio';
 
 interface CaseStudyProps {
   title: string;
@@ -22,16 +21,8 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
 }) => {
   return <div className="mb-16">
       <div className="flex flex-col md:flex-row gap-8 items-center">
-        <div className="md:w-1/3 w-full">
-          <div className="overflow-hidden rounded-lg shadow-md">
-            <AspectRatio ratio={4/3} className="w-full">
-              <img 
-                src={imageSrc} 
-                alt={imageAlt} 
-                className="w-full h-full object-cover" 
-              />
-            </AspectRatio>
-          </div>
+        <div className="md:w-1/3">
+          <img src={imageSrc} alt={imageAlt} className="rounded-lg shadow-md w-full h-auto" />
         </div>
         <div className="md:w-2/3">
           <h3 className="text-xl font-light mb-3 uppercase text-charcoal font-roboto">{title}</h3>
