@@ -7,9 +7,10 @@ interface MeteorsDemoProps {
   title: string;
   description: string;
   bgColorClass?: string;
+  meteorColor?: string;
 }
 
-export function MeteorsDemo({ title, description, bgColorClass = "from-pink-light to-offwhite" }: MeteorsDemoProps) {
+export function MeteorsDemo({ title, description, bgColorClass = "from-pink-light to-offwhite", meteorColor = "bg-pink-light" }: MeteorsDemoProps) {
   return (
     <div className="w-full relative max-w-xs mx-auto">
       <div className={cn("absolute inset-0 h-full w-full bg-gradient-to-r transform scale-[0.80] rounded-full blur-3xl", bgColorClass)} />
@@ -40,7 +41,7 @@ export function MeteorsDemo({ title, description, bgColorClass = "from-pink-ligh
         </p>
 
         {/* Meaty part - Meteor effect */}
-        <Meteors number={20} />
+        <Meteors number={20} color={meteorColor} />
       </div>
     </div>
   );

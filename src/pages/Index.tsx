@@ -50,18 +50,21 @@ const Index: React.FC = () => {
               title="Network" 
               description="Our team has deep relationships with key tier one editors established over decades of work. Whether it's an editor at a broadcaster or a broadsheet, our calls get answered and our clients' messages are heard." 
               bgColorClass="from-pink-light to-offwhite" 
+              meteorColor="bg-pink-dark" 
             />
             
             <MeteorsDemo 
               title="Focus" 
               description="We take the time to understand our clients' business, the nuances of their industry and their customers, to help develop and deliver a data-driven media strategy that is aligned to their priorities." 
               bgColorClass="from-blue-300 to-violet-200" 
+              meteorColor="bg-blue-400" 
             />
             
             <MeteorsDemo 
               title="Quantifiable" 
               description="We focus on creating measurable results. Whether it's increased media coverage, enhanced brand awareness, or stronger audience engagement, we deliver outcomes that are quantifiable." 
               bgColorClass="from-indigo-300 to-blue-500/30" 
+              meteorColor="bg-indigo-300" 
             />
           </div>
         </motion.div>
