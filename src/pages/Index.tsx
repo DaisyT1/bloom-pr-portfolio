@@ -7,7 +7,6 @@ import Services from '@/components/Services';
 import DetailedServices from '@/components/DetailedServices';
 import CaseStudies from '@/components/CaseStudies';
 import About from '@/components/About';
-import WhatWeOffer from '@/components/WhatWeOffer';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -33,15 +32,6 @@ const Index: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <DetailedServices />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <WhatWeOffer />
         </motion.div>
 
         <motion.div
