@@ -66,15 +66,15 @@ function Item({
       className="min-h-[80vh] md:min-h-[90vh] w-full snap-center py-12 md:py-24 flex justify-center items-center"
     >
       <div className="container mx-auto px-4 max-w-4xl">
-        <div className="flex flex-col items-center text-center gap-8">
-          <div className="w-full max-w-md h-48 md:h-64 overflow-hidden rounded-lg">
+        <div className="flex flex-row items-center gap-8">
+          <div className="w-24 h-24 md:w-32 md:h-32 overflow-hidden rounded-lg flex-shrink-0">
             <img 
               src={section.image} 
               alt={section.title} 
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-full max-w-md">
+          <div className="flex-1">
             <h3 className="text-2xl md:text-3xl font-playfair mb-4">{section.title}</h3>
             <p className="text-base md:text-lg text-charcoal/80">{section.content}</p>
           </div>
@@ -104,23 +104,6 @@ const WhatWeOffer: React.FC = () => {
       >
         <div className="sticky top-0 pt-20 pb-6 bg-offwhite z-10">
           <h2 className="text-3xl md:text-4xl font-playfair text-center mb-3">What We Offer</h2>
-          <div className="flex justify-center">
-            <TextRotate
-              ref={textRotateRef}
-              texts={offerSections.map(section => section.title)}
-              mainClassName="text-lg md:text-xl font-light text-pink w-full justify-center flex"
-              splitLevelClassName="overflow-hidden"
-              staggerFrom="first"
-              animatePresenceMode="wait"
-              loop={false}
-              auto={false}
-              staggerDuration={0.01}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ type: "spring", duration: 0.5, bounce: 0.2 }}
-            />
-          </div>
         </div>
 
         <div className="overflow-auto snap-y snap-mandatory h-[calc(100vh-100px)]">
