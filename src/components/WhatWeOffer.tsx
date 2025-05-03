@@ -103,7 +103,9 @@ const WhatWeOffer: React.FC = () => {
         className="max-w-5xl mx-auto"
       >
         <div className="sticky top-0 pt-20 pb-6 bg-offwhite z-10">
-          <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">What We Offer</h2>
+          <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">
+            What We Offer
+          </h2>
         </div>
 
         <div className="overflow-auto snap-y snap-mandatory h-[calc(100vh-100px)]">

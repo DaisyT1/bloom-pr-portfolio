@@ -14,8 +14,11 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-charcoal mb-6 roboto">
-            The Communications Agency for Leaders and Disruptors
+            Defining Leaders and Disruptors
           </h1>
+          <h2 className="text-1xl md:text-1xl lg:text-1xl font-light text-charcoal mb-6 uppercase roboto">
+            Beaufoy is a full-service communications agency
+          </h2>
         </motion.div>
       </div>
     </AuroraBackground>

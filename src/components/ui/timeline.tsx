@@ -45,7 +45,7 @@ export const Timeline = ({
   return <div className="w-full bg-offwhite px-4 md:px-10 font-roboto" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10 md:py-[5px]">
         <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">
-          Our Approach
+          What we offer
         </h2>
       </div>
 

@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
         </a>
 
         <a
-          href="mailto:will@beaufoycomms.com?subject=Just%20saying%20hi"
+          href="mailto:will@beaufoy.co?subject=Just%20saying%20Hi"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
             containerClassName="w-36 h-10"
             borderClassName="bg-[radial-gradient(#FF5C8A_100%,transparent_100%)]"
             duration={isHovered ? 2000 : 4000}
-          > 
+          >
             CONTACT US <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </a>
