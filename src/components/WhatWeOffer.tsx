@@ -1,83 +1,139 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { TextRotate, TextRotateRef } from '@/components/ui/text-rotate';
 import { motion } from 'framer-motion';
+
+// City images for the sections
+const cityImages = [
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2276&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=3087&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2838&auto=format&fit=crop"
+];
+
+// Content for What We Offer section
+const offerSections = [
+  {
+    title: "Network",
+    content: "Our team has deep relationships with key tier one editors established over decades of work. Whether it's an editor at a broadcaster or a broadsheet, our calls get answered and our clients' messages are heard.",
+    image: cityImages[0]
+  },
+  {
+    title: "Focus",
+    content: "We take the time to understand our clients' business, the nuances of their industry and their customers, to help develop and deliver a data-driven media strategy that is aligned to their priorities.",
+    image: cityImages[1]
+  },
+  {
+    title: "Quantifiable",
+    content: "We focus on creating measurable results. Whether it's increased media coverage, enhanced brand awareness, or stronger audience engagement, we deliver outcomes that are quantifiable.",
+    image: cityImages[2]
+  }
+];
+
+function Item({ 
+  index, 
+  section, 
+  onInView 
+}: { 
+  index: number, 
+  section: typeof offerSections[0], 
+  onInView: (index: number, inView: boolean) => void 
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  
+  useEffect(() => {
+    if (!ref.current) return;
+    
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        onInView(index, entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+    
+    observerRef.current.observe(ref.current);
+    
+    return () => {
+      if (observerRef.current && ref.current) {
+        observerRef.current.unobserve(ref.current);
+      }
+    };
+  }, [index, onInView]);
+
+  return (
+    <div 
+      ref={ref}
+      className="min-h-[80vh] md:min-h-[90vh] w-full snap-center py-12 md:py-24"
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
+          <div className="w-full md:w-1/2 h-64 md:h-96 overflow-hidden rounded-lg">
+            <img 
+              src={section.image} 
+              alt={section.title} 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <h3 className="text-3xl md:text-4xl font-playfair mb-6">{section.title}</h3>
+            <p className="text-lg md:text-xl text-charcoal/80">{section.content}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const WhatWeOffer: React.FC = () => {
   const textRotateRef = useRef<TextRotateRef>(null);
 
-  // Content for What We Offer section
-  const offerTexts = [
-    "Network\n\nOur team has deep relationships with key tier one editors established over decades of work. Whether it's an editor at a broadcaster or a broadsheet, our calls get answered and our clients' messages are heard.",
-    "Focus\n\nWe take the time to understand our clients' business, the nuances of their industry and their customers, to help develop and deliver a data-driven media strategy that is aligned to their priorities.",
-    "Quantifiable\n\nWe focus on creating measurable results. Whether it's increased media coverage, enhanced brand awareness, or stronger audience engagement, we deliver outcomes that are quantifiable."
-  ];
-
-  // Trigger the next text in rotation every 5 seconds
-  const handleNextText = () => {
-    if (textRotateRef.current) {
-      textRotateRef.current.next();
+  const handleInView = (index: number, inView: boolean) => {
+    if (inView && textRotateRef.current) {
+      textRotateRef.current.jumpTo(index);
     }
   };
 
   return (
-    <section id="what-we-offer" className="bg-offwhite py-24">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-5xl mx-auto"
-        >
-          <h2 className="text-4xl md:text-5xl font-playfair mb-16 text-center">What We Offer</h2>
-          
-          <div className="bg-white rounded-lg shadow-sm border p-8 md:p-12">
+    <section id="what-we-offer" className="bg-offwhite relative">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="max-w-7xl mx-auto"
+      >
+        <div className="sticky top-0 pt-24 pb-8 bg-offwhite z-10">
+          <h2 className="text-4xl md:text-5xl font-playfair text-center mb-4">What We Offer</h2>
+          <div className="flex justify-center">
             <TextRotate
               ref={textRotateRef}
-              texts={offerTexts}
-              splitBy="lines"
-              auto={true}
-              rotationInterval={5000}
-              mainClassName="text-xl font-light leading-relaxed w-full flex flex-col"
-              splitLevelClassName="my-4 overflow-hidden"
-              elementLevelClassName="text-charcoal"
-              staggerDuration={0.02}
+              texts={offerSections.map(section => section.title)}
+              mainClassName="text-xl md:text-2xl font-light text-pink w-full justify-center flex"
+              splitLevelClassName="overflow-hidden"
               staggerFrom="first"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -20, opacity: 0 }}
-              transition={{ type: "spring", duration: 0.7, bounce: 0.2 }}
+              animatePresenceMode="wait"
+              loop={false}
+              auto={false}
+              staggerDuration={0.01}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ type: "spring", duration: 0.5, bounce: 0.2 }}
             />
-            
-            <div className="flex justify-between mt-12 pt-6 border-t border-gray-100">
-              <button 
-                onClick={() => textRotateRef.current?.previous()} 
-                className="px-4 py-2 rounded-md bg-pink-light text-pink-dark font-medium hover:bg-pink-dark hover:text-white transition-colors"
-              >
-                Previous
-              </button>
-              
-              <div className="flex space-x-2">
-                {offerTexts.map((_, idx) => (
-                  <button 
-                    key={idx}
-                    onClick={() => textRotateRef.current?.jumpTo(idx)}
-                    className="w-3 h-3 rounded-full bg-gray-200 hover:bg-pink"
-                  ></button>
-                ))}
-              </div>
-              
-              <button 
-                onClick={handleNextText}
-                className="px-4 py-2 rounded-md bg-pink-light text-pink-dark font-medium hover:bg-pink-dark hover:text-white transition-colors"
-              >
-                Next
-              </button>
-            </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+
+        <div className="overflow-auto snap-y snap-mandatory h-[calc(100vh-100px)]">
+          {offerSections.map((section, index) => (
+            <Item
+              key={index}
+              index={index}
+              section={section}
+              onInView={handleInView}
+            />
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };

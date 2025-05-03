@@ -53,14 +53,7 @@ const Index: React.FC = () => {
           <About />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <WhatWeOffer />
-        </motion.div>
+        <WhatWeOffer />
 
         <motion.div
           initial={{ opacity: 0 }}
