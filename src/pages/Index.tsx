@@ -44,8 +44,25 @@ const Index: React.FC = () => {
           id="what-we-offer"
         >
           <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">What We Offer</h2>
-          <div className="flex justify-center items-center">
-            <MeteorsDemo />
+          
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+            <MeteorsDemo 
+              title="Network" 
+              description="Our team has deep relationships with key tier one editors established over decades of work. Whether it's an editor at a broadcaster or a broadsheet, our calls get answered and our clients' messages are heard." 
+              bgColorClass="from-pink-light to-offwhite" 
+            />
+            
+            <MeteorsDemo 
+              title="Focus" 
+              description="We take the time to understand our clients' business, the nuances of their industry and their customers, to help develop and deliver a data-driven media strategy that is aligned to their priorities." 
+              bgColorClass="from-blue-300 to-violet-200" 
+            />
+            
+            <MeteorsDemo 
+              title="Quantifiable" 
+              description="We focus on creating measurable results. Whether it's increased media coverage, enhanced brand awareness, or stronger audience engagement, we deliver outcomes that are quantifiable." 
+              bgColorClass="from-indigo-300 to-blue-500/30" 
+            />
           </div>
         </motion.div>
 

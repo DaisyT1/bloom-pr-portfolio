@@ -1,47 +1,46 @@
 
 import React from "react";
 import { Meteors } from "@/components/ui/meteors";
+import { cn } from "@/lib/utils";
 
-export function MeteorsDemo() {
+interface MeteorsDemoProps {
+  title: string;
+  description: string;
+  bgColorClass?: string;
+}
+
+export function MeteorsDemo({ title, description, bgColorClass = "from-pink-light to-offwhite" }: MeteorsDemoProps) {
   return (
-    <div className="py-16 flex justify-center items-center">
-      <div className="w-full relative max-w-xs">
-        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-pink-light to-offwhite transform scale-[0.80] rounded-full blur-3xl" />
-        <div className="relative shadow-xl bg-offwhite border border-pink-light px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
-          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-charcoal/30">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="h-2 w-2 text-charcoal"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
-              />
-            </svg>
-          </div>
-
-          <h1 className="font-bold text-xl text-charcoal mb-4 relative z-50">
-            Meteors because they&apos;re cool
-          </h1>
-
-          <p className="font-normal text-base text-charcoal/70 mb-4 relative z-50">
-            I don&apos;t know what to write so I&apos;ll just paste something
-            cool here. One more sentence because lorem ipsum is just
-            unacceptable. Won&apos;t ChatGPT the shit out of this.
-          </p>
-
-          <button className="border px-4 py-1 rounded-lg border-charcoal/30 text-charcoal hover:bg-pink-light transition-colors">
-            Explore
-          </button>
-
-          {/* Meaty part - Meteor effect */}
-          <Meteors number={20} />
+    <div className="w-full relative max-w-xs mx-auto">
+      <div className={cn("absolute inset-0 h-full w-full bg-gradient-to-r transform scale-[0.80] rounded-full blur-3xl", bgColorClass)} />
+      <div className="relative shadow-xl bg-offwhite border border-pink-light px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+        <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-charcoal/30">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="h-2 w-2 text-charcoal"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+            />
+          </svg>
         </div>
+
+        <h1 className="font-bold text-xl text-charcoal mb-4 relative z-50">
+          {title}
+        </h1>
+
+        <p className="font-normal text-base text-charcoal/70 mb-4 relative z-50">
+          {description}
+        </p>
+
+        {/* Meaty part - Meteor effect */}
+        <Meteors number={20} />
       </div>
     </div>
   );
