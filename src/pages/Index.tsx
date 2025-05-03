@@ -35,6 +35,8 @@ const Index: React.FC = () => {
           <DetailedServices />
         </motion.div>
 
+        <WhatWeOffer />
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -52,8 +54,6 @@ const Index: React.FC = () => {
         >
           <About />
         </motion.div>
-
-        <WhatWeOffer />
 
         <motion.div
           initial={{ opacity: 0 }}

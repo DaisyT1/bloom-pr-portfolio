@@ -29,30 +29,30 @@ const offerSections = [
   }
 ];
 
-function Item({ 
-  index, 
-  section, 
-  onInView 
-}: { 
-  index: number, 
-  section: typeof offerSections[0], 
-  onInView: (index: number, inView: boolean) => void 
+function Item({
+  index,
+  section,
+  onInView
+}: {
+  index: number,
+  section: typeof offerSections[0],
+  onInView: (index: number, inView: boolean) => void
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
-  
+
   useEffect(() => {
     if (!ref.current) return;
-    
+
     observerRef.current = new IntersectionObserver(
       ([entry]) => {
         onInView(index, entry.isIntersecting);
       },
       { threshold: 0.5 }
     );
-    
+
     observerRef.current.observe(ref.current);
-    
+
     return () => {
       if (observerRef.current && ref.current) {
         observerRef.current.unobserve(ref.current);
@@ -61,22 +61,22 @@ function Item({
   }, [index, onInView]);
 
   return (
-    <div 
+    <div
       ref={ref}
-      className="min-h-[80vh] md:min-h-[90vh] w-full snap-center py-12 md:py-24 flex justify-center items-center"
+      className="min-h-[80vh] md:min-h-[90vh] w-full snap-center py-0 md:py-0 flex justify-center items-center"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-row items-center justify-center gap-8 max-w-2xl mx-auto">
           <div className="w-24 h-24 md:w-32 md:h-32 overflow-hidden rounded-lg flex-shrink-0">
-            <img 
-              src={section.image} 
-              alt={section.title} 
+            <img
+              src={section.image}
+              alt={section.title}
               className="w-full h-full object-cover"
             />
           </div>
           <div className="flex-1 max-w-sm">
-            <h3 className="text-2xl md:text-3xl font-playfair mb-4">{section.title}</h3>
-            <p className="text-base md:text-lg text-charcoal/80">{section.content}</p>
+            <h3 className="text-1xl md:text-2xl mb-4 uppercase text-charcoal font-roboto">{section.title}</h3>
+            <p className="text-lg mb-6 text-charcoal font-light font-['roboto']">{section.content}</p>
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@ const WhatWeOffer: React.FC = () => {
         className="max-w-5xl mx-auto"
       >
         <div className="sticky top-0 pt-20 pb-6 bg-offwhite z-10">
-          <h2 className="text-3xl md:text-4xl font-playfair text-center mb-3">What We Offer</h2>
+          <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">What We Offer</h2>
         </div>
 
         <div className="overflow-auto snap-y snap-mandatory h-[calc(100vh-100px)]">
