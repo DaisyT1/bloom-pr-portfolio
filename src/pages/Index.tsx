@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
@@ -44,7 +45,7 @@ const Index: React.FC = () => {
         >
           <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">What We Offer</h2>
           
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-3 px-4">
             <MeteorsDemo 
               title="Network" 
               description="Our team has deep relationships with key tier one editors established over decades of work. Whether it's an editor at a broadcaster or a broadsheet, our calls get answered and our clients' messages are heard." 

@@ -13,12 +13,12 @@ export function MeteorsDemo({ title, description, bgColorClass = "from-pink-ligh
   return (
     <div className="w-full relative max-w-xs mx-auto">
       <div className={cn("absolute inset-0 h-full w-full bg-gradient-to-r transform scale-[0.80] rounded-full blur-3xl", bgColorClass)} />
-      <div className="relative shadow-xl bg-offwhite border border-pink-light px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
-        <h1 className="font-bold text-xl text-charcoal mb-4 relative z-50">
+      <div className="relative shadow-xl bg-[rgb(17,24,39)] border border-pink-light px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+        <h1 className="font-bold text-xl text-white mb-4 relative z-50">
           {title}
         </h1>
 
-        <p className="font-normal text-base text-charcoal/70 mb-4 relative z-50">
+        <p className="font-normal text-base text-gray-300 mb-4 relative z-50">
           {description}
         </p>
 
