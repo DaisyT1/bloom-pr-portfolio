@@ -59,7 +59,7 @@ export const Timeline = ({
               <h3 
                 className={`hidden md:block text-xl md:pl-20 md:text-3xl font-light font-roboto uppercase tracking-wider transition-colors duration-300 ${
                   activeIndex === index 
-                    ? 'text-gradient bg-gradient-to-t from-[#FFCAD4] via-[#BDE4A8] to-transparent bg-clip-text text-transparent' 
+                    ? 'text-[rgb(203,213,225)]' 
                     : 'text-charcoal'
                 }`}
               >
@@ -71,7 +71,7 @@ export const Timeline = ({
               <h3 
                 className={`md:hidden block text-2xl mb-4 text-left font-light font-roboto uppercase tracking-wider transition-colors duration-300 ${
                   activeIndex === index 
-                    ? 'text-gradient bg-gradient-to-t from-[#FFCAD4] via-[#BDE4A8] to-transparent bg-clip-text text-transparent' 
+                    ? 'text-[rgb(203,213,225)]' 
                     : 'text-charcoal'
                 }`}
               >
