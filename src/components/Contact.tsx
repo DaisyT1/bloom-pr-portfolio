@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
         <h2 className="text-3xl font-light text-center mb-12 uppercase tracking-wider text-charcoal font-roboto md:text-3xl">Get in touch</h2>
 
         <p className="text-lg mb-10 text-charcoal font-light font-['roboto']">
-          We partner with leaders and disruptors to ensure their voices are heard. If you'd like to discuss how we can help bolster and protect your brand's reputation.
+          We partner with leaders and disruptors to ensure their voices are heard. Please get in touch if you'd like to discuss how we can help bolster and protect your brand's reputation.
         </p>
 
         <a
