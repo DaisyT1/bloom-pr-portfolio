@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
             Defining Leaders and Disruptors
           </h1>
           <h2 className="text-1xl md:text-1xl lg:text-1xl font-light text-charcoal mb-6 uppercase roboto">
-            Beaufoy is a full-service communications agency
+            STRATEGIC MEDIA RELATIONS FOR START-UPS
           </h2>
         </motion.div>
       </div>

@@ -48,32 +48,32 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
 };
 const Services: React.FC = () => {
   const services = [{
-    title: "Brand Strategy",
-    description: "We partner with our clients to help develop their brand identity and shape their narrative.",
+    title: "Positioning review",
+    description: "We help founders explain what they do, why it matters and where they fit in the market.",
     borderColor: "border-pink-light",
     delay: "0s",
     colors: ['#FFDEE2', '#FFB5C5', '#FF8FAE', '#FFD1DC']
   }, {
-    title: "Content Creation",
-    description: "We help our clients to explain complex issues succinctly to establish trust and build loyalty.",
+    title: "Founder Profiles",
+    description: "We turn founders into credible voices on the markets they are building in.",
     borderColor: "border-blue-100",
     delay: "0.1s",
     colors: ['#D1E5F7', '#B0D5F5', '#8FB9F0', '#D1E9FF']
   }, {
     title: "Media Relations",
-    description: "We leverage our extensive network of tier one editors to secure high-impact coverage.",
+    description: "We place start-ups in the publications their customers, investors and future hires actually read.",
     borderColor: "border-green-100",
     delay: "0.2s",
     colors: ['#D1F7E0', '#B0F5C5', '#8FF0AA', '#D1FFE9']
   }, {
-    title: "Crisis Management",
-    description: "We are trusted advisers during the most testing of times for our clients' reputations.",
+    title: "Reputation management",
+    description: "We help start-ups build reputations that hold up under scrutiny.",
     borderColor: "border-yellow-100",
     delay: "0.3s",
     colors: ['#F7F1D1', '#F5E5B0', '#F0D68F', '#FFEED1']
   }, {
-    title: "Brand Partnerships",
-    description: "We advise and connect our clients with like-minded brands and influencers.",
+    title: "LLM visibility",
+    description: "We help start-ups build the public record that LLMs draw from.",
     borderColor: "border-purple-100",
     delay: "0.4s",
     colors: ['#E5D1F7', '#D0B0F5', '#B88FF0', '#E9D1FF']
