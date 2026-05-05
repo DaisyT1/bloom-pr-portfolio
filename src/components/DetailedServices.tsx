@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const DetailedServices: React.FC = () => {
   const timelineData = [
     {
-      title: "Brand Strategy",
+      title: "Positioning review",
       content: (
         <motion.div
           className="text-charcoal font-roboto"
@@ -16,11 +16,7 @@ const DetailedServices: React.FC = () => {
           viewport={{ once: true }}
         >
           <p className="text-charcoal text-sm md:text-base font-light mb-4 font-roboto">
-            We partner with our clients to develop their brand identity and shape their narrative.
-          </p>
-          <p className="text-charcoal text-sm md:text-base font-light mb-6 font-roboto">
-            Our team specialises in crafting data-driven brand strategies that build strong market identities and foster customer loyalty.
-            Our informed approach helps brands create compelling narratives, advocating for their products and ensuring they are able to stand out from the noise.
+            Most start-ups do not have a visibility problem. They have a clarity problem. We work with founders to sharpen the company narrative, define the market context and turn complex products into stories journalists, customers and investors can understand.
           </p>
           <div className="mb-6">
             <motion.div
@@ -30,7 +26,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              — Brand positioning and messaging
+              — Company positioning and messaging
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
@@ -39,7 +35,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              — Market research and consumer insights
+              — Founder narrative
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
@@ -48,14 +44,14 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              — Brand audits and competitor analysis
+              — Market and category framing
             </motion.div>
           </div>
         </motion.div>
       ),
     },
     {
-      title: "Content Creation",
+      title: "Founder Profiles",
       content: (
         <motion.div
           className="text-charcoal font-roboto"
@@ -65,11 +61,7 @@ const DetailedServices: React.FC = () => {
           viewport={{ once: true }}
         >
           <p className="text-charcoal text-sm md:text-base font-light mb-4 font-roboto">
-            We help our clients to explain complex issues succinctly to establish trust and build loyalty.
-          </p>
-          <p className="text-charcoal text-sm md:text-base font-light mb-6 font-roboto">
-            Our team of strategists and copywriters have substantial experience writing for clients across fashion, sustainability, finance, and technology.
-            As a result, they are well-versed in dissecting complex concepts and positioning them for a broad range of audiences, including high-net-worth individuals, government and regulatory bodies, and tier one media.
+            Founder visibility works when it is tied to substance. We help founders develop sharp points of view, write clearly about their category and build a public record through interviews, commentary, op-eds and owned content.
           </p>
           <div className="mb-6">
             <motion.div
@@ -79,7 +71,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              — Speechwriting
+              — Founder profiles
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
@@ -88,7 +80,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              — Website copywriting
+              — Op-eds and commentary
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
@@ -97,14 +89,14 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              — Op-ed and blog authoring
+              — Website and narrative copy
             </motion.div>
           </div>
         </motion.div>
       ),
     },
     {
-      title: "Reputation Management",
+      title: "Media Relations",
       content: (
         <motion.div
           className="text-charcoal font-roboto"
@@ -114,11 +106,7 @@ const DetailedServices: React.FC = () => {
           viewport={{ once: true }}
         >
           <p className="text-charcoal text-sm md:text-base font-light mb-4 font-roboto">
-            We leverage our relationships with editors, influencers and key decision makers to build and protect our clients' reputations.
-          </p>
-          <p className="text-charcoal text-sm md:text-base font-light mb-6 font-roboto">
-            Our team's network sits across tier one national and international outlets in Europe and the US.
-            While our focus is positioning luxury consumer brands, our team's experience spans sectors including financial services, technology, fashion, and travel.
+            Funding rounds, launches and senior hires are triggers, not stories. We find the angle underneath the announcement, then pitch it to the journalists and publications that shape the category.
           </p>
           <div className="mb-6">
             <motion.div
@@ -128,7 +116,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              — Media relations
+              — Funding and launch announcements
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
@@ -137,7 +125,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              — Crisis management
+              — Tier-one and trade media outreach
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
@@ -146,14 +134,14 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              — Spokesperson training
+              — Journalist briefings
             </motion.div>
           </div>
         </motion.div>
       ),
     },
     {
-      title: "Brand Partnerships",
+      title: "Reputation management",
       content: (
         <motion.div
           className="text-charcoal font-roboto"
@@ -163,11 +151,7 @@ const DetailedServices: React.FC = () => {
           viewport={{ once: true }}
         >
           <p className="text-charcoal text-sm md:text-base font-light mb-4 font-roboto">
-            We advise and connect our clients with like-minded brands and influencers.
-          </p>
-          <p className="text-charcoal text-sm md:text-base font-light mb-6 font-roboto">
-            Our team’s network extends beyond traditional media. We help our clients build impactful partnerships by connecting them with the right brands and influencers.
-            By identifying the right partners, our clients are able to craft authentic campaigns, maximising engagement with their customers.
+            As companies grow, visibility creates pressure. We help founders communicate clearly during moments of scrutiny, change or momentum, protecting trust with customers, investors, employees and the media.
           </p>
           <div className="mb-6">
             <motion.div
@@ -177,7 +161,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              — Brand/influencer due diligence
+              — Reputation counsel
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
@@ -186,7 +170,7 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              — Outreach
+              — Sensitive announcements
             </motion.div>
             <motion.div
               className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
@@ -195,7 +179,52 @@ const DetailedServices: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              — Reputation tracking and social listening
+              — Message discipline
+            </motion.div>
+          </div>
+        </motion.div>
+      ),
+    },
+    {
+      title: "LLM Visibility",
+      content: (
+        <motion.div
+          className="text-charcoal font-roboto"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-charcoal text-sm md:text-base font-light mb-4 font-roboto">
+            LLMs answer questions about companies and categories by drawing on trusted public sources. Media coverage, founder interviews, analyst references and repeated category language all help define how a company is understood and surfaced.
+          </p>
+          <div className="mb-6">
+            <motion.div
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              — Trusted public references
+            </motion.div>
+            <motion.div
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm mb-2 uppercase"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              — Clear category language
+            </motion.div>
+            <motion.div
+              className="flex gap-2 items-center text-charcoal font-roboto text-sm uppercase"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              — Founder commentary
             </motion.div>
           </div>
         </motion.div>
