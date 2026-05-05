@@ -72,7 +72,7 @@ const Services: React.FC = () => {
     delay: "0.3s",
     colors: ['#F7F1D1', '#F5E5B0', '#F0D68F', '#FFEED1']
   }, {
-    title: "LLM visibility",
+    title: "LLM Discoverability",
     description: "We help start-ups build the public record that LLMs draw from.",
     borderColor: "border-purple-100",
     delay: "0.4s",

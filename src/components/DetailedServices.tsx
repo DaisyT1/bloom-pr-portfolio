@@ -186,7 +186,7 @@ const DetailedServices: React.FC = () => {
       ),
     },
     {
-      title: "LLM Visibility",
+      title: "LLM Discoverability",
       content: (
         <motion.div
           className="text-charcoal font-roboto"
